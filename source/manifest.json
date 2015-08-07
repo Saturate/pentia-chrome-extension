@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Pentia Chrome Enhancer",
+  "description": "Does useful stuff for you if you work @ Pentia.",
+  "version": "1.0.1",
+
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_popup": "views/popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/",
+    "http://tfs.pentia.com/"
+  ],
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": ["http://tfs.pentia.dk/*"],
+      "css": ["styles/tfs-styles.css"],
+      "js": ["scripts/fts.js"]
+    }
+  ]
+}

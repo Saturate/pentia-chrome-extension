@@ -1,0 +1,19 @@
+.workitemcontrol .richeditor-container { height: 800px !important; }
+div.ui-dialog
+{
+    top: 45px !important;  
+    width: 98% !important; 
+}
+.dialog.ajax-panel.ui-dialog-content.ui-widget-content
+{
+    height:85vh !important;
+}
+
+[rawtitle="History"] .workitemcontrol .richeditor-container {
+  height: 200px !important;
+}
+
+
+#header-row {
+  background: #000000 !important;
+}
