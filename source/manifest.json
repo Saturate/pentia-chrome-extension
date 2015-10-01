@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Pentia Chrome Enhancer",
   "description": "Does useful stuff for you if you work @ Pentia.",
-  "version": "1.0.1",
+  "version": "1.0.2",
 
   "browser_action": {
     "default_icon": "images/icon.png",
@@ -11,7 +11,12 @@
   "permissions": [
     "activeTab",
     "https://ajax.googleapis.com/",
-    "http://tfs.pentia.com/"
+    "http://tfs.pentia.com/",
+    "http://tfs.pentia.dk/",
+    "http://tfs15.pentia.dk/"
+  ],
+  "web_accessible_resources": [
+    "scripts/tfs15.js"
   ],
   "content_scripts": [
     {
@@ -19,6 +24,12 @@
       "matches": ["http://tfs.pentia.dk/*"],
       "css": ["styles/tfs-styles.css"],
       "js": ["scripts/fts.js"]
+    },
+    {
+      "run_at": "document_end",
+      "matches": ["http://tfs15.pentia.dk/*"],
+      "css": ["styles/tfs-styles.css"],
+      "js": ["scripts/tfs15-injector.js"]
     }
   ]
 }
